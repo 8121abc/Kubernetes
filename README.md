@@ -11,10 +11,10 @@ kubernetes企业级实践的点点滴滴
 - calico 3.1.3
 
 ## 实践教程
-- **[理解kubernetes的认证授权][1]**
-- [网络方案的选择][2]
-- [高可用集群部署（二进制方案）][3]
-- [高可用集群部署（kubeadm方案）][4]
+- **[《理解kubernetes的认证授权》][1]**
+- **[《网络方案的选择》][2]**
+- **[《高可用集群部署（二进制方案）》][3]**
+- **[《高可用集群部署（kubeadm方案）》][4]**
 
 
 [1]:https://gitee.com/pa/kubernetes/blob/master/docs/auth.md
