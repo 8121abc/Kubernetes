@@ -18,6 +18,6 @@ kubernetes企业级实践的点点滴滴
 
 
 [1]:https://gitee.com/pa/kubernetes/blob/master/docs/auth.md
-[2]:https://gitee.com/pa/kubernetes/blob/master/docs/auth.md
+[2]:https://gitee.com/pa/kubernetes/blob/master/docs/cni.md
 [3]:https://gitee.com/pa/kubernetes-ha-binary
 [4]:https://gitee.com/pa/kubernetes-ha-kubeadm
