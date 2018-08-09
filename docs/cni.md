@@ -14,7 +14,7 @@ CNI本身实现了一些基本的插件(https://github.com/containernetworking/p
 通过给每台宿主机分配一个子网的方式为容器提供虚拟网络，它基于Linux TUN/TAP，使用UDP封装IP包来创建overlay网络，并借助etcd维护网络的分配情况。
 
 控制平面上host本地的flanneld负责从远端的ETCD集群同步本地和其它host上的subnet信息，并为POD分配IP地址。数据平面flannel通过Backend（比如UDP封装）来实现L3 Overlay，既可以选择一般的TUN设备又可以选择VxLAN设备。
-flannel.png![Alt text](./1533808462216.png)
+flannel.png![Alt text](https://gitee.com/pa/kubernetes/raw/master/images/flannel.png)
 > **优点：**
 - 配置安装简单，使用方便
 - 与公有云集成方便
@@ -30,7 +30,7 @@ Calico是一个纯三层的数据中心网络方案（不需要Overlay），并�
 Calico是一个专门做数据中心网络的开源项目。当业界都痴迷于Overlay的时候，Calico实现multi-host容器网络的思路确可以说是返璞归真——pure L3，pure L3是指容器间的组网都是通过IP来完成的。这是因为，Calico认为L3更为健壮，且对于网络人员更为熟悉，而L2网络由于控制平面太弱会导致太多问题，排错起来也更加困难。那么，如果能够利用好L3去设计数据中心的话就完全没有必要用L2。
 
 如下图所示，描述了从源容器经过源宿主机，经过数据中心的路由，然后到达目的宿主机最后分配到目的容器的过程。
-![Alt text](https://gitee.com/pa/kubernetes/blob/master/images/calico.png)
+![Alt text](https://gitee.com/pa/kubernetes/raw/master/images/calico.png)
 整个过程中始终都是根据iptables规则进行路由转发，并没有进行封包，解包的过程，这和flannel比起来效率就会快多了。
 
 > **优点：**
@@ -43,5 +43,5 @@ Calico是一个专门做数据中心网络的开源项目。当业界都痴迷�
 
 ### 对比
 从上述的原理可以看出，flannel在进行路由转发的基础上进行了封包解包的操作，这样浪费了CPU的计算资源。下图是从网上找到的各个开源网络组件的性能对比。可以看出无论是带宽还是网络延迟，calico和主机的性能是差不多的。
-![Alt text](./1533809556664.png)
+![Alt text](https://gitee.com/pa/kubernetes/raw/master/images/compare.png)
 
