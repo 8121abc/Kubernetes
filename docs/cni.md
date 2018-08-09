@@ -1,4 +1,4 @@
-# kubernetes的网络方案
+# kubernetes的网络插件（CNI）
 在网络层面，kubernetes没有进入的更底层的具体container的网络互通互联的解决方案的设计中，而是将网络互通功能一分为二，主要关注kubernetes的服务在网络中的暴露以及POD本身网络的配置动作，但是POD具体需要配置的网络参数以及service、POD之间的互通互联，则交给CNI来解决。
 
 ### CNI介绍
