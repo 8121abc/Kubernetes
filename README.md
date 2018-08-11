@@ -11,11 +11,11 @@ kubernetes企业级实践全纪录
 - calico 3.1.3
 
 ## 理论部分
-- **[理解kubernetes的认证授权][1]**
-- **[网络插件(CNI)的选择][2]**
+#### **[理解kubernetes的认证授权][1]**
+#### **[网络插件(CNI)的选择][2]**
 ## 高可用集群部署
-- **[二进制方案][3]**
-- **[kubeadm][4]**
+#### **[使用二进制方式部署kubernetes高可用集群][3]**
+#### [使用kubeadm方式部署kubernetes高可用集群][4]
 
 
 [1]:https://gitee.com/pa/kubernetes/blob/master/docs/auth.md
