@@ -1,17 +1,7 @@
-# kubernetes
-
-## 项目介绍
-kubernetes企业级实践全纪录
-
-#### 软件版本
-- os centos7.2（ubuntu也适用，需要替换部分命令）
-- kubernetes 1.11.2
-- etcd 3.2.18
-- docker 17.03
-- calico 3.1.3
+# kubernetes-v1.11.2 企业级实践全纪录
 
 ## 一、理论部分
-#### [2. 理解kubernetes的认证授权][1]
+#### [1. 理解kubernetes的认证授权][1]
 #### [2. 网络插件(CNI)的选择][2]
 ## 二、高可用集群部署
 #### [1. 使用二进制方式部署kubernetes高可用集群][3]
