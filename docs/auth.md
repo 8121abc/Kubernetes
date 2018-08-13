@@ -48,3 +48,6 @@ AdmissionControl - 准入控制本质上为一段准入代码，在对kubernetes
 - ServiceAccount：它将serviceAccounts实现了自动化，它会辅助serviceAccount做一些事情，比如如果pod没有serviceAccount属性，它会自动添加一个default，并确保pod的serviceAccount始终存在
 - LimitRanger：他会观察所有的请求，确保没有违反已经定义好的约束条件，这些条件定义在namespace中LimitRange对象中。如果在kubernetes中使用LimitRange对象，则必须使用这个插件。
 - NamespaceExists：它会观察所有的请求，如果请求尝试创建一个不存在的namespace，则这个请求被拒绝。
+
+[1]:https://www.zhihu.com/question/33645891/answer/57721969
+[2]:http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html
