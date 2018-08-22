@@ -1,4 +1,4 @@
-# kubernetes-v1.11.2 企业级实践全纪录
+# kubernetes-v1.11.2 企业级实践全记录
 
 ## 一、理论部分
 #### [1. 理解kubernetes的认证授权][1]
